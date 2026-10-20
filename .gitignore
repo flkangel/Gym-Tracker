@@ -1,41 +1,63 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+node_modules/
+.pnpm-store/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
+# Build outputs
+dist/
+dev-dist/
+build/
+out/
+.next/
 *.tsbuildinfo
 next-env.d.ts
+
+# Tests & reports
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+.lighthouseci/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Supabase local
+supabase/.temp/
+supabase/.branches/
+
+# Personal data — never versioned
+data/private/
+*.xlsx
+*.xls
+*.xlsm
+data/**/*.csv
+photos/
+exports/
+
+# Local-only docs
+/PROMPT_CLAUDE_CODE.md
+
+# Capacitor / native build outputs
+ios/App/Pods/
+ios/App/build/
+ios/App/App.xcworkspace/xcuserdata/
+ios/DerivedData/
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+
+# Editors / OS
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+.vercel
