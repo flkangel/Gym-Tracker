@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "EditorConfig.EditorConfig",
+    "eamodio.gitlens",
+    "usernamehw.errorlens",
+    "vitest.explorer",
+    "ms-playwright.playwright",
+    "ms-vscode-remote.remote-containers",
+    "Supabase.vscode-supabase-extension",
+    "github.vscode-github-actions"
+  ]
+}

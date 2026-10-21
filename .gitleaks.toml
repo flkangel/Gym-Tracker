@@ -1,0 +1,11 @@
+# Default gitleaks rules plus project allowlist. Keep the allowlist minimal and
+# justify every entry.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Generated files and lockfiles that only contain integrity hashes"
+paths = [
+  '''pnpm-lock\.yaml''',
+  '''src/routeTree\.gen\.ts''',
+]
