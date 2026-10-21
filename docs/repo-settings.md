@@ -27,8 +27,11 @@ Settings that live outside the code and must be configured by hand (or with
 - Actions → General → Workflow permissions: **Read repository contents**, and
   tick **Allow GitHub Actions to create and approve pull requests** (needed by
   release-please).
-- Code security: enable **Dependabot alerts / security updates** and **Private
-  vulnerability reporting**.
+- Code security: enable **Dependabot alerts / security updates**, **secret
+  scanning + push protection** and **private vulnerability reporting** (all
+  free because the repository is public).
+- Actions → General → fork pull requests: require approval for **all external
+  contributors**.
 
 > release-please caveat: PRs opened with the default `GITHUB_TOKEN` do not
 > trigger other workflows, so required checks never report on the release PR.
@@ -69,7 +72,7 @@ gh auth refresh -h github.com -s workflow
   - Site URL: the Vercel production URL (`https://<project>.vercel.app`).
   - Redirect URLs: `http://localhost:5173/**`,
     `https://<project>.vercel.app/**` and the preview wildcard
-    `https://*-<vercel-account-slug>.vercel.app/**`.
+    `https://gym-tracker-*-personal-angel1.vercel.app/**`.
 - Project Settings → API Keys: use the **publishable** key in the app.
 - Before any destructive migration: Database → Backups (or `pg_dump`) first,
   then `pnpm db:push:dry`.

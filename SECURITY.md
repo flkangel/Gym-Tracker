@@ -6,9 +6,8 @@ weight, measurements, progress photos). Security issues are taken seriously.
 ## Reporting a vulnerability
 
 Please **do not open a public issue**. Use GitHub's private vulnerability
-reporting (_Security → Report a vulnerability_) on this repository, or contact
-the owner, [@flkangel](https://github.com/flkangel), directly. Expect an answer
-within a week.
+reporting (_Security → Report a vulnerability_) on this repository. Expect an
+answer within a week.
 
 ## Design rules
 
