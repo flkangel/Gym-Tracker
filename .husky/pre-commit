@@ -1,0 +1,8 @@
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks is not installed; it is required to block secrets." >&2
+  echo "Install it (see README > Setup) or use the devcontainer." >&2
+  exit 1
+fi
+gitleaks git --staged --redact --no-banner --log-level warn .
+pnpm exec lint-staged
+pnpm typecheck

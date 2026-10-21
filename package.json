@@ -22,7 +22,9 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
-    "lhci": "lhci autorun"
+    "lhci": "lhci autorun",
+    "prepare": "husky",
+    "secrets:scan": "gitleaks git --redact --no-banner ."
   },
   "dependencies": {
     "@hookform/resolvers": "^6.0.0",
@@ -40,6 +42,8 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
     "@eslint/js": "^10.0.1",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.64.1",
@@ -64,7 +68,9 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.7",
     "globals": "^17.13.0",
+    "husky": "^9.1.7",
     "jsdom": "^30.1.3",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
@@ -75,5 +81,14 @@
     "vite-plugin-pwa": "^2.0.0",
     "vitest": "^5.0.5",
     "workbox-window": "^7.4.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write"
+    ],
+    "*.{json,md,css,html,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }
