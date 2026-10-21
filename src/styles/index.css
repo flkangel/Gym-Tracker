@@ -77,7 +77,7 @@
     -webkit-tap-highlight-color: transparent;
   }
   body {
-    @apply bg-background text-foreground min-h-dvh antialiased;
+    @apply min-h-dvh bg-background text-foreground antialiased;
     /* Notch / home indicator when installed as a standalone PWA. */
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
       env(safe-area-inset-left);

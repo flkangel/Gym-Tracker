@@ -25,7 +25,7 @@ progress photos). None of it is versioned:
 
 ## Roadmap
 
-1. **Phase 0** — repo hygiene and security *(this)*
+1. **Phase 0** — repo hygiene and security _(this)_
 2. **Phase 1** — development foundations: devcontainer, quality gates, CI
 3. **Phase 2** — data model: Supabase migrations with RLS
 4. **Phase 3** — spreadsheet import script

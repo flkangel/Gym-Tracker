@@ -1,0 +1,5 @@
+# Single-package repo; this file only carries pnpm settings.
+peerDependencyRules:
+  allowedVersions:
+    # jsx-a11y 6.10 works on ESLint 10 but has not widened its peer range yet.
+    eslint-plugin-jsx-a11y>eslint: '10'

@@ -11,7 +11,7 @@ export function EnvError({ missing }: { missing: string[] }) {
           <li key={name}>{name}</li>
         ))}
       </ul>
-      <p className="text-muted-foreground text-sm">
+      <p className="text-sm text-muted-foreground">
         Copiá <code>.env.example</code> a <code>.env</code> y completalas (o configuralas en
         Vercel).
       </p>
