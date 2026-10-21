@@ -1,0 +1,39 @@
+{
+  // Light container: Node + pnpm + gh + Supabase CLI (dev dependency) + gitleaks.
+  // No docker-in-docker: Supabase runs hosted; migrations are validated in CI.
+  "name": "Gym-Tracker",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "containerEnv": {
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+    "PNPM_HOME": "/home/node/.local/share/pnpm"
+  },
+  "mounts": ["source=gym-tracker-pnpm-store,target=/home/node/.local/share/pnpm/store,type=volume"],
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "forwardPorts": [5173, 4173],
+  "portsAttributes": {
+    "5173": { "label": "Vite dev", "onAutoForward": "notify" },
+    "4173": { "label": "Vite preview (PWA build)", "onAutoForward": "silent" }
+  },
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "EditorConfig.EditorConfig",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "vitest.explorer",
+        "ms-playwright.playwright",
+        "ms-azuretools.vscode-containers",
+        "Supabase.vscode-supabase-extension",
+        "ckolkman.vscode-postgres",
+        "github.vscode-github-actions"
+      ]
+    }
+  }
+}
