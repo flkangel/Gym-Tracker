@@ -1,0 +1,3 @@
+-- Seed data applied after migrations on `supabase db reset` (CI ephemeral stack).
+-- Phase 2 adds the exercise library and muscle groups here. Never put personal
+-- data in this file: it is versioned.
